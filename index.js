@@ -8,7 +8,7 @@ const welcome = "Нарешті, я буду накуй видаляти кож�
     "Інтервал - 1 хвилина, час пішов :)";
 bot.start(ctx => ctx.reply(welcome));
 
-const DELETE_AFTER = 1000;
+const DELETE_AFTER = 60 * 1000;
 const MUSIC_PATTERN = /^http.*(soundcloud|youtube)\.com(\/[\d\w-?=&]+)+/;
 
 bot.on('message', (ctx) => {
