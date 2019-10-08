@@ -14,7 +14,7 @@ bot.telegram.getMe().then((botInfo) => {
 bot.command('help',ctx => ctx.reply(welcome));
 
 const DELETE_AFTER = 60 * 1000;
-const MUSIC_PATTERN = /^http.*(soundcloud|youtube)\.com(\/[\d\w-?=&]+)+/;
+const MUSIC_PATTERN = /.*http.*(soundcloud|youtube)\.com(\/[\d\w-?=&]+)+/;
 bot.on('message', (ctx) => {
     const { message_id, text = '', chat } = ctx.update.message;
     console.log(text, message_id, chat.id);
